@@ -1,0 +1,33 @@
+{% extends 'test_base.html' %}
+
+{%block content %}
+<style type="text/css">
+	p.serif {
+  		font-family: "Times New Roman", Times, serif;
+	}
+
+</style>
+<br/>
+
+<form action="." method="POST">{% csrf_token %}
+
+	
+
+	<h3><p class="serif" align="center"><u> Deleting article </u></p></h1>
+	<div>
+		{% for x in messages %}
+				<h5> <p class="serif" style="color: green;"> {{x}} </p></h5>
+		{% endfor %}
+	</div>
+
+
+	<h5><p class="serif" style="color:red">Are you sure you want to delete "{{ object.article_title }}" article?</p></h5>
+	
+	<input type="submit" value="Yes" button type="button" class="btn btn-danger btn-sm">
+	<a href="/article_list/"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a></p>
+</form>
+
+
+
+{% endblock %}
+

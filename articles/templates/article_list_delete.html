@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<style type="text/css">
+	p.serif {
+  		font-family: "Times New Roman", Times, serif;
+	}
+
+</style>
+<h3> <p class="serif" align="center"><u> List of articles </u></h3>
+<!-- {{object}} -->
+<div>
+	{% for x in messages %}
+			<h5> <p class="serif" style="color: green;"> {{x}} </p></h5>
+	{% endfor %}
+</div>
+
+{% for x in object %}
+
+	<!-- <p>{{x.article_title}}----- {{x.article_description}}</p> -->
+
+
+	  <!-- <p>{{ x.id }}----- <a href='/article_details_display/{{ x.id }}/'>  {{ x.article_description }}  </a></p> -->
+
+	<p class="serif"><a href='{{x.get_absolute_url_delete}}' button type="button" class="btn btn-secondary btn-sm">{{ x.article_title }}</a></p><br/>
+
+{% endfor %}
+
+<p align="center" class="serif"><a href="http://127.0.0.1:8000/" button type="button" class="btn btn-danger">Go back </a></p>
+
+ 
+{% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST"> {% csrf_token %}
+<style type="text/css">
+	p.serif {
+  		font-family: "Times New Roman", Times, serif;
+	}
+</style>
+<h3><p class="serif" align="center"><u> Add article </u></p></h1>
+	<div>
+		{% for message in messages %}
+		<h4><p style="color: green;" class="serif"> {{message}}</p> </h4>
+		{% endfor %}
+	</div>
+	
+	{{ Form.as_p }}
+
+
+<p align="center"><input type='submit' value='Save' button type="button" class="btn btn-danger">                                                                                            
+<a href="http://127.0.0.1:8000/guest_home_page/"><button type="button" class="btn btn-danger">Go back</button></a></p>
+
+</form>
+	
+
+{% endblock %}

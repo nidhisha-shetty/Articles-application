@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<div>
+	{% for message in messages %}
+	<h4><p style="color: green;" class="serif"> {{message}}</p> </h4>
+	{% endfor %}
+</div><br/><br/>
+<p align="center">
+<a href="login/"> <button type="button" class="btn btn-secondary">Admin</button></a> &nbsp; &nbsp;
+<a href="/guest_home_page/"> <button type="button" class="btn btn-secondary">Guest</button></a>
+
+</p>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'test_base.html' %}
+
+{% block content %}
+<!doctype html>
+<div>
+		
+		{%	for message in messages %}
+
+		<h5 style="color: red;"> <p class="serif"> {{message}} </p></h5>
+
+		{% endfor %}
+
+	</div>
+<style type="text/css">
+	p.serif{
+  		font-family: "Times New Roman", Times, serif;
+	}
+</style>
+	<br/>
+	<h3><p align="center" class="serif"><u> Registration page </u></p></h3>
+	<form method="POST" action="."> {% csrf_token %}
+		 First name: <input type="text" name="First name" ><br><br>
+		 Last name: <input type="text" name="Last name" ><br><br>
+		 Email address: <input type="email" name="Email address" ><br><br>
+		 Username: <input type="text" name="Username"><br><br>
+		 Password: <input type="password" name="Password" ><br><br>
+		 Confirm Password: <input type="password" name="confirm password" ><br><br>
+		 <p align="center"><input type='submit' value='Save' button type="button" class="btn btn-danger">
+		 <a href="http://127.0.0.1:8000/admin_home_page/"><button type="button" class="btn btn-danger btn">Back</button></a></p>                                                                                 			
+
+	</form>
+	
+	<div>
+		
+		{%	for message in messages %}
+
+		<h5 style="color: green;"> <p class="serif"> {{message}} </p></h5>
+
+		{% endfor %}
+
+	</div>
+
+<!-- </body>
+</html> -->
+
+{% endblock %}

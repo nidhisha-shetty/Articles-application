@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<!doctype html>
+
+<style type="text/css">
+	p.serif{
+  		font-family: "Times New Roman", Times, serif;
+	}
+</style>
+	<br/>
+	<h3><p align="center" class="serif"><u> Login page </u></p></h3>
+	<div>
+		
+		{%	for message in messages %}
+
+		<h5 style="color: red;"> <p class="serif"> {{message}} </p></h5>
+
+		{% endfor %}
+
+	</div>
+	<form method="POST" action="."> {% csrf_token %}		
+		 Username: <input type="text" name="Username"><br><br>
+		 Password: <input type="password" name="Password" ><br><br>
+		 <p align="center"><input type='submit' value='Login' button type="button" class="btn btn-danger">
+		 <a href="http://127.0.0.1:8000/"><button type="button" class="btn btn-danger"> Back </button></a> </p>
+	</form>
+	
+
+
+<!-- </body>
+</html> -->
+
+{% endblock %}
