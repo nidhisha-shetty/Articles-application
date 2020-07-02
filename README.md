@@ -1,9 +1,15 @@
-# articles-webapp
+# About the application
 
-This is an articles based django application which has two modules<br/>
-* Admin<br/>
-* Guest
+This is a Django based app wherein the admin can log-in and perform CRUD (create, read, update, and delete) operations on articles, whereas the visitors can only
+create and read articles. 
 
-<b> Functions: </b>
-* Admin can add, edit, view, and delete articles. Also, admin has the privilege to add another admin.<br/>
-* Whereas, Guest can only view articles.
+## Installing and executing the app
+
+```
+> git clone https://github.com/nidhisha-shetty/Django-articles-app
+> cd Django-articles-app
+> python manage.py runserver
+```
+
+## App link
+http://nidhishas.pythonanywhere.com/
