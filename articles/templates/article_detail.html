@@ -1,5 +1,5 @@
 {% extends 'test_base.html' %}
-
+{% if user.is_authenticated %}
 
 {% block content %}
 <br/>
@@ -16,6 +16,6 @@
 
 <p align="center" class="serif"><a href="/article_list/" button type="btn" class="btn btn-danger">Go back </a></p>
 
-
+{% endif %}
 {% endblock %}
 
