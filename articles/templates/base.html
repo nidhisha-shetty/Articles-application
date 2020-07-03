@@ -1,4 +1,6 @@
 <!-- <h1> Welcome to the world of articles</h1> -->
+{% block content %}
+{% if user.is_authenticated %}
 
 <!doctype html>
 <html>
@@ -29,8 +31,6 @@
 		
 	</div>
 
-{% block content %}
-{% endblock content %}
 
 
 		   <!-- Great, til you resize. -->
@@ -47,3 +47,5 @@
 
 </body>
 </html>
+{% endif %}
+{% endblock content %}
