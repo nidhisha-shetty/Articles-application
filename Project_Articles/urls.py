@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from articles.views import article_detail_display_view, article_detail_store_view, home_view, article_delete_view, article_list_view, article_list_delete_view,render_initial_data, article_list_render_data, main_home_view, guest_home_view, register, login, guest_article_list, guest_article_view, guest_article_create, guest_article_detail_display_view
+from articles.views import article_detail_display_view, article_detail_store_view, home_view, article_delete_view, article_list_view, article_list_delete_view,render_initial_data, article_list_render_data, main_home_view, guest_home_view, register, login, guest_article_list, guest_article_view, guest_article_create, guest_article_detail_display_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,5 +34,6 @@ urlpatterns = [
     path("login/", login, name="login"),
     path("guest_article_view/", guest_article_view, name='guest_article_view'),
     path("guest_article_create/", guest_article_create, name="guest_article_create"),
-    path("guest_article_display/<int:pass_id>/", guest_article_detail_display_view, name='guest_article-details-display-id' )
+    path("guest_article_display/<int:pass_id>/", guest_article_detail_display_view, name='guest_article-details-display-id'),
+    path("logout/", logout_view)
 ]
