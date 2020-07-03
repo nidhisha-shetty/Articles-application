@@ -264,3 +264,6 @@ def article_list_render_data(request):
 	}
 	return render(request, "article_list_edit.html", context)
 	
+def logout_view(request):
+	auth.logout(request)
+	return redirect("/")
