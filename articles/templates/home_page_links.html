@@ -2,7 +2,7 @@
 
 {% block content %}
 
-
+{% if user.is_authenticated %}
 
 <!-- <h3> <p class="serif"> Actions to be performed: </p></h3> -->
 
@@ -39,5 +39,5 @@
 
 <p align="center"> <a href="/"> <button type="button" class="btn btn-danger">Go back</button></a>
 </p>
-
+{% endif %}
 {% endblock %}
