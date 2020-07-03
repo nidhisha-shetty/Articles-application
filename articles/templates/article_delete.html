@@ -1,4 +1,5 @@
 {% extends 'test_base.html' %}
+{% if user.is_authenticated %}
 
 {%block content %}
 <style type="text/css">
@@ -28,6 +29,6 @@
 </form>
 
 
-
+{% endif %}
 {% endblock %}
 
