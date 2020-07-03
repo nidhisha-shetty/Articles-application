@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <br/>
 <style type="text/css">
 	p.serif {
@@ -29,7 +31,7 @@
 
 <p align="center" class="serif"><a href="http://127.0.0.1:8000/" button type="button" class="btn btn-danger">Go back </a></p>
 
- 
+{% endif %}
 {% endblock %}
 
 
