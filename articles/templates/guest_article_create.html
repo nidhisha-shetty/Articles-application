@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% if user.is_authenticated %}
 <form method="POST"> {% csrf_token %}
 <style type="text/css">
 	p.serif {
@@ -23,5 +23,5 @@
 
 </form>
 	
-
+{% endif %}
 {% endblock %}
