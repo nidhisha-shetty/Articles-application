@@ -8,6 +8,8 @@
 </style>
 
 {% block content %}
+{% if user.is_authenticated %}
+
 <br/>
 <form action="." method='POST'>{% csrf_token %}
 	<h3><p class="serif" align="center"><u> Editing article </u></p></h1>
@@ -25,6 +27,7 @@
 	<a href="/article_list/"><button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
 
 </form>
+{% endif %}
 {% endblock %} 
 
 
